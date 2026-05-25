@@ -1,13 +1,396 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    pn
+  Home
 {% endblock %}
 
 {% block content %}
+  <section class="min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-6xl text-center">
+      <!-- Perfil -->
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <picture class="">
+          <img src="{% static 'img/Josue Jairo Quichca Alvarez.png' %}" alt="Josue Jairo Quichca Alvarez" class="w-48 rounded-3xl" />
+        </picture>
 
-<h1 class="text-4xl font-bold">
-    Home 🚀
-</h1>
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-bold">Josue Q Alvarez <span class="">(JeiDev)</span></h1>
 
+          <p class="mt-2 text-xl sm:text-2xl font-semibold">Desarrollador de software</p>
+
+          <!-- Redes -->
+          <div class="mt-4 flex justify-center gap-6 text-2xl [&_svg]:w-10 [&_svg]:h-10">
+            <a href="https://github.com/josueqalvarez" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 73 73" class="">
+                <defs></defs> <g id="team-collaboration/version-control/github" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
+                    <rect id="mask" stroke="#000000" stroke-width="2" fill="#000000" x="-1" y="-1" width="71" height="71" rx="14"></rect> <path d="M58.3067362,21.4281798 C55.895743,17.2972267 52.6253846,14.0267453 48.4948004,11.615998 C44.3636013,9.20512774 39.8535636,8 34.9614901,8 C30.0700314,8 25.5585181,9.20549662 21.4281798,11.615998 C17.2972267,14.0266224 14.0269912,17.2972267 11.615998,21.4281798 C9.20537366,25.5590099 8,30.0699084 8,34.9607523 C8,40.8357654 9.71405782,46.1187277 13.1430342,50.8109917 C16.5716416,55.5036246 21.0008949,58.7507436 26.4304251,60.5527176 C27.0624378,60.6700211 27.5302994,60.5875152 27.8345016,60.3072901 C28.1388268,60.0266961 28.290805,59.6752774 28.290805,59.2545094 C28.290805,59.1842994 28.2847799,58.5526556 28.2730988,57.3588401 C28.2610487,56.1650247 28.2553926,55.1235563 28.2553926,54.2349267 L27.4479164,54.3746089 C26.9330843,54.468919 26.2836113,54.5088809 25.4994975,54.4975686 C24.7157525,54.4866252 23.9021284,54.4044881 23.0597317,54.2517722 C22.2169661,54.1004088 21.4330982,53.749359 20.7075131,53.1993604 C19.982297,52.6493618 19.4674649,51.9294329 19.1631397,51.0406804 L18.8120898,50.2328353 C18.5780976,49.6950097 18.2097104,49.0975487 17.7064365,48.4426655 C17.2031625,47.7871675 16.6942324,47.3427912 16.1794003,47.108799 L15.9336039,46.9328437 C15.7698216,46.815909 15.6178435,46.6748743 15.4773006,46.511215 C15.3368806,46.3475556 15.2317501,46.1837734 15.1615401,46.0197452 C15.0912072,45.855594 15.1494901,45.7209532 15.3370036,45.6153308 C15.5245171,45.5097084 15.8633939,45.4584343 16.3551097,45.4584343 L17.0569635,45.5633189 C17.5250709,45.6571371 18.104088,45.9373622 18.7947525,46.4057156 C19.4850481,46.8737001 20.052507,47.4821045 20.4972521,48.230683 C21.0358155,49.1905062 21.6846737,49.9218703 22.4456711,50.4251443 C23.2060537,50.9284182 23.9727072,51.1796248 24.744894,51.1796248 C25.5170807,51.1796248 26.1840139,51.121096 26.7459396,51.0046532 C27.3072505,50.8875956 27.8338868,50.7116403 28.3256025,50.477771 C28.5362325,48.9090515 29.1097164,47.7039238 30.0455624,46.8615271 C28.7116959,46.721353 27.5124702,46.5102313 26.4472706,46.2295144 C25.3826858,45.9484285 24.2825656,45.4922482 23.1476478,44.8597436 C22.0121153,44.2280998 21.0701212,43.44374 20.3214198,42.5080169 C19.5725954,41.571802 18.9580429,40.3426971 18.4786232,38.821809 C17.9989575,37.300306 17.7590632,35.5451796 17.7590632,33.5559381 C17.7590632,30.7235621 18.6837199,28.3133066 20.5326645,26.3238191 C19.6665366,24.1944035 19.7483048,21.8072644 20.778215,19.1626478 C21.4569523,18.951772 22.4635002,19.1100211 23.7973667,19.6364115 C25.1314792,20.1630477 26.1082708,20.6141868 26.7287253,20.9882301 C27.3491798,21.3621504 27.8463057,21.6790175 28.2208409,21.9360032 C30.3978419,21.3277217 32.644438,21.0235195 34.9612442,21.0235195 C37.2780503,21.0235195 39.5251383,21.3277217 41.7022622,21.9360032 L43.0362517,21.0938524 C43.9484895,20.5319267 45.0257392,20.0169716 46.2654186,19.5488642 C47.5058357,19.0810026 48.4543466,18.9521409 49.1099676,19.1630167 C50.1627483,21.8077563 50.2565666,24.1947724 49.3901927,26.324188 C51.2390143,28.3136755 52.1640399,30.7245457 52.1640399,33.556307 C52.1640399,35.5455485 51.9232849,37.3062081 51.444357,38.8393922 C50.9648143,40.3728223 50.3449746,41.6006975 49.5845919,42.5256002 C48.8233486,43.4503799 47.8753296,44.2285916 46.7404118,44.8601125 C45.6052481,45.4921252 44.504759,45.9483056 43.4401742,46.2293914 C42.3750975,46.5104772 41.1758719,46.7217219 39.8420054,46.8621419 C41.0585683,47.9149226 41.6669728,49.5767225 41.6669728,51.846804 L41.6669728,59.2535257 C41.6669728,59.6742937 41.8132948,60.0255895 42.1061847,60.3063064 C42.3987058,60.5865315 42.8606653,60.6690374 43.492678,60.5516109 C48.922946,58.7498829 53.3521992,55.5026409 56.7806837,50.810008 C60.2087994,46.117744 61.923472,40.8347817 61.923472,34.9597686 C61.9222424,30.0695396 60.7162539,25.5590099 58.3067362,21.4281798 Z" id="Shape" fill="#FFFFFF"></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/josueqalvarez/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20" class="text-[#0A66C2]" fill="currentColor">
+                <path d="M22 3.47059V20.5294C22 20.9194 21.8451 21.2935 21.5693 21.5693C21.2935 21.8451 20.9194 22 20.5294 22H3.47059C3.08056 22 2.70651 21.8451 2.43073 21.5693C2.15494 21.2935 2 20.9194 2 20.5294V3.47059C2 3.08056 2.15494 2.70651 2.43073 2.43073C2.70651 2.15494 3.08056 2 3.47059 2H20.5294C20.9194 2 21.2935 2.15494 21.5693 2.43073C21.8451 2.70651 22 3.08056 22 3.47059ZM7.88235 9.64706H4.94118V19.0588H7.88235V9.64706ZM8.14706 6.41177C8.14861 6.18929 8.10632 5.96869 8.02261 5.76255C7.93891 5.55642 7.81542 5.36879 7.65919 5.21039C7.50297 5.05198 7.31708 4.92589 7.11213 4.83933C6.90718 4.75277 6.68718 4.70742 6.46471 4.70588H6.41177C5.95934 4.70588 5.52544 4.88561 5.20552 5.20552C4.88561 5.52544 4.70588 5.95934 4.70588 6.41177C4.70588 6.86419 4.88561 7.29809 5.20552 7.61801C5.52544 7.93792 5.95934 8.11765 6.41177 8.11765C6.63426 8.12312 6.85565 8.0847 7.06328 8.00458C7.27092 7.92447 7.46074 7.80422 7.62189 7.65072C7.78304 7.49722 7.91237 7.31346 8.00248 7.10996C8.09259 6.90646 8.14172 6.6872 8.14706 6.46471V6.41177ZM19.0588 13.3412C19.0588 10.5118 17.2588 9.41177 15.4706 9.41177C14.8851 9.38245 14.3021 9.50715 13.7799 9.77345C13.2576 10.0397 12.8143 10.4383 12.4941 10.9294H12.4118V9.64706H9.64706V19.0588H12.5882V14.0529C12.5457 13.5403 12.7072 13.0315 13.0376 12.6372C13.3681 12.2429 13.8407 11.9949 14.3529 11.9471H14.4647C15.4 11.9471 16.0941 12.5353 16.0941 14.0176V19.0588H19.0353L19.0588 13.3412Z" />
+              </svg>
+            </a>
+
+            <a href="https://www.tiktok.com/@jeidev7">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="4 3 24 26" class="bg-black p-1 rounded-md">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M8.45095 19.7926C8.60723 18.4987 9.1379 17.7743 10.1379 17.0317C11.5688 16.0259 13.3561 16.5948 13.3561 16.5948V13.2197C13.7907 13.2085 14.2254 13.2343 14.6551 13.2966V17.6401C14.6551 17.6401 12.8683 17.0712 11.4375 18.0775C10.438 18.8196 9.90623 19.5446 9.7505 20.8385C9.74562 21.5411 9.87747 22.4595 10.4847 23.2536C10.3345 23.1766 10.1815 23.0889 10.0256 22.9905C8.68807 22.0923 8.44444 20.7449 8.45095 19.7926ZM22.0352 6.97898C21.0509 5.90039 20.6786 4.81139 20.5441 4.04639H21.7823C21.7823 4.04639 21.5354 6.05224 23.3347 8.02482L23.3597 8.05134C22.8747 7.7463 22.43 7.38624 22.0352 6.97898ZM28 10.0369V14.293C28 14.293 26.42 14.2312 25.2507 13.9337C23.6179 13.5176 22.5685 12.8795 22.5685 12.8795C22.5685 12.8795 21.8436 12.4245 21.785 12.3928V21.1817C21.785 21.6711 21.651 22.8932 21.2424 23.9125C20.709 25.246 19.8859 26.1212 19.7345 26.3001C19.7345 26.3001 18.7334 27.4832 16.9672 28.28C15.3752 28.9987 13.9774 28.9805 13.5596 28.9987C13.5596 28.9987 11.1434 29.0944 8.96915 27.6814C8.49898 27.3699 8.06011 27.0172 7.6582 26.6277L7.66906 26.6355C9.84383 28.0485 12.2595 27.9528 12.2595 27.9528C12.6779 27.9346 14.0756 27.9528 15.6671 27.2341C17.4317 26.4374 18.4344 25.2543 18.4344 25.2543C18.5842 25.0754 19.4111 24.2001 19.9423 22.8662C20.3498 21.8474 20.4849 20.6247 20.4849 20.1354V11.3475C20.5435 11.3797 21.2679 11.8347 21.2679 11.8347C21.2679 11.8347 22.3179 12.4734 23.9506 12.8889C25.1204 13.1864 26.7 13.2483 26.7 13.2483V9.91314C27.2404 10.0343 27.7011 10.0671 28 10.0369Z" fill="#EE1D52"></path> <path d="M26.7009 9.91314V13.2472C26.7009 13.2472 25.1213 13.1853 23.9515 12.8879C22.3188 12.4718 21.2688 11.8337 21.2688 11.8337C21.2688 11.8337 20.5444 11.3787 20.4858 11.3464V20.1364C20.4858 20.6258 20.3518 21.8484 19.9432 22.8672C19.4098 24.2012 18.5867 25.0764 18.4353 25.2553C18.4353 25.2553 17.4337 26.4384 15.668 27.2352C14.0765 27.9539 12.6788 27.9357 12.2604 27.9539C12.2604 27.9539 9.84473 28.0496 7.66995 26.6366L7.6591 26.6288C7.42949 26.4064 7.21336 26.1717 7.01177 25.9257C6.31777 25.0795 5.89237 24.0789 5.78547 23.7934C5.78529 23.7922 5.78529 23.791 5.78547 23.7898C5.61347 23.2937 5.25209 22.1022 5.30147 20.9482C5.38883 18.9122 6.10507 17.6625 6.29444 17.3494C6.79597 16.4957 7.44828 15.7318 8.22233 15.0919C8.90538 14.5396 9.6796 14.1002 10.5132 13.7917C11.4144 13.4295 12.3794 13.2353 13.3565 13.2197V16.5948C13.3565 16.5948 11.5691 16.028 10.1388 17.0317C9.13879 17.7743 8.60812 18.4987 8.45185 19.7926C8.44534 20.7449 8.68897 22.0923 10.0254 22.991C10.1813 23.0898 10.3343 23.1775 10.4845 23.2541C10.7179 23.5576 11.0021 23.8221 11.3255 24.0368C12.631 24.8632 13.7249 24.9209 15.1238 24.3842C16.0565 24.0254 16.7586 23.2167 17.0842 22.3206C17.2888 21.7611 17.2861 21.1978 17.2861 20.6154V4.04639H20.5417C20.6763 4.81139 21.0485 5.90039 22.0328 6.97898C22.4276 7.38624 22.8724 7.7463 23.3573 8.05134C23.5006 8.19955 24.2331 8.93231 25.1734 9.38216C25.6596 9.61469 26.1722 9.79285 26.7009 9.91314Z" fill="#ffffff"></path> <path d="M4.48926 22.7568V22.7594L4.57004 22.9784C4.56076 22.9529 4.53074 22.8754 4.48926 22.7568Z" fill="#69C9D0"></path> <path d="M10.5128 13.7916C9.67919 14.1002 8.90498 14.5396 8.22192 15.0918C7.44763 15.7332 6.79548 16.4987 6.29458 17.354C6.10521 17.6661 5.38897 18.9168 5.30161 20.9528C5.25223 22.1068 5.61361 23.2983 5.78561 23.7944C5.78543 23.7956 5.78543 23.7968 5.78561 23.798C5.89413 24.081 6.31791 25.0815 7.01191 25.9303C7.2135 26.1763 7.42963 26.4111 7.65924 26.6334C6.92357 26.1457 6.26746 25.5562 5.71236 24.8839C5.02433 24.0451 4.60001 23.0549 4.48932 22.7626C4.48919 22.7605 4.48919 22.7584 4.48932 22.7564V22.7527C4.31677 22.2571 3.95431 21.0651 4.00477 19.9096C4.09213 17.8736 4.80838 16.6239 4.99775 16.3108C5.4985 15.4553 6.15067 14.6898 6.92509 14.0486C7.608 13.4961 8.38225 13.0567 9.21598 12.7484C9.73602 12.5416 10.2778 12.3891 10.8319 12.2934C11.6669 12.1537 12.5198 12.1415 13.3588 12.2575V13.2196C12.3808 13.2349 11.4148 13.4291 10.5128 13.7916Z" fill="#69C9D0"></path> <path d="M20.5438 4.04635H17.2881V20.6159C17.2881 21.1983 17.2881 21.76 17.0863 22.3211C16.7575 23.2167 16.058 24.0253 15.1258 24.3842C13.7265 24.923 12.6326 24.8632 11.3276 24.0368C11.0036 23.823 10.7187 23.5594 10.4844 23.2567C11.5962 23.8251 12.5913 23.8152 13.8241 23.341C14.7558 22.9821 15.4563 22.1734 15.784 21.2774C15.9891 20.7178 15.9864 20.1546 15.9864 19.5726V3H20.4819C20.4819 3 20.4315 3.41188 20.5438 4.04635ZM26.7002 8.99104V9.9131C26.1725 9.79263 25.6609 9.61447 25.1755 9.38213C24.2352 8.93228 23.5026 8.19952 23.3594 8.0513C23.5256 8.1559 23.6981 8.25106 23.8759 8.33629C25.0192 8.88339 26.1451 9.04669 26.7002 8.99104Z" fill="#69C9D0"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frase principal -->
+      <div class="mt-8 px-4 py-2">
+        <p class="text-xl sm:text-2xl font-bold">Soy desarrollador de software freelance. Me gusta crear contenido en redes sociales y transformar ideas en realidades.</p>
+      </div>
+
+      <!-- Tecnologías -->
+      <div class="mt-6 flex flex-wrap justify-center gap-6 text-lg font-semibold [&_svg]:w-10 [&_svg]:h-10">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z" fill="url(#paint0_linear_87_8204)"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z" fill="url(#paint1_linear_87_8204)"></path> <defs>
+              <linearGradient id="paint0_linear_87_8204" x1="12.4809" y1="2" x2="12.4809" y2="22.7407" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#327EBD"></stop> <stop offset="1" stop-color="#1565A7"></stop>
+              </linearGradient> <linearGradient id="paint1_linear_87_8204" x1="19.519" y1="9.25928" x2="19.519" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFDA4B"></stop> <stop offset="1" stop-color="#F9C600"></stop>
+              </linearGradient>
+            </defs>
+          </g>
+        </svg>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>file_type_django</title><path d="M14.135,4H18.1V22.169a26.218,26.218,0,0,1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322,0-4,2.673-6.6,6.816-6.6a6.448,6.448,0,0,1,1.724.2V4Zm0,9.142a3.992,3.992,0,0,0-1.337-.2c-2,0-3.163,1.223-3.163,3.366,0,2.087,1.107,3.239,3.138,3.239a9.355,9.355,0,0,0,1.362-.1v-6.3Z" style="fill:#44b78b"></path>
+            <path d="M24.4,10.059v9.1c0,3.133-.235,4.639-.923,5.938A6.316,6.316,0,0,1,20.237,28l-3.678-1.733A5.708,5.708,0,0,0,19.7,23.638c.566-1.121.745-2.42.745-5.837V10.059Z" style="fill:#44b78b"></path>
+            <rect x="20.441" y="4.02" width="3.964" height="4.028" style="fill:#44b78b"></rect>
+          </g>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <g transform="translate(-1.92 -1.92) scale(1.12)">
+            <path fill="#F2C811" d="M13.501 16h-7.498c-0.69 0-1.25 0.559-1.25 1.25v12.496c0 0.69 0.559 1.25 1.25 1.25h8.747v-13.746c0-0.69-0.559-1.25-1.25-1.25z" />
+
+            <path fill="#D9A300" d="M19.749 8.502h-7.498c-0.69 0-1.25 0.559-1.25 1.25v5.623h2.499c1.035 0.001 1.873 0.84 1.874 1.874v13.746h5.623v-21.244c0-0.69-0.559-1.25-1.25-1.25z" />
+
+            <path fill="#7F5F00" d="M27.247 2.254v27.492c0 0.69-0.559 1.25-1.25 1.25h-4.374v-21.244c-0.001-1.035-0.84-1.873-1.874-1.874h-2.499v-5.623c0-0.69 0.559-1.25 1.25-1.25h7.498c0.69 0 1.25 0.559 1.25 1.25z" />
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <rect x="2" y="2" width="28" height="28" fill="#FFCA28"></rect> <path d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z" fill="#3E3E3E"></path> <path d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z" fill="#3E3E3E"></path>
+          </g>
+        </svg>
+        <svg viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>databases-and-servers/databases/mongodb</title> <desc>Created with Sketch.</desc> <defs></defs> <g id="databases-and-servers/databases/mongodb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="container" transform="translate(2.000000, 2.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#ffffff" stroke-width="2">
+                <rect id="mask" x="-1" y="-1" width="71" height="71" rx="14"></rect>
+              </g> <g id="Group" transform="translate(25.000000, 11.000000)" fill-rule="nonzero">
+                <path d="M12.4944775,50.7282275 L11.1460449,50.2673438 C11.1460449,50.2673438 11.3107227,43.3929395 8.8434082,42.8996191 C7.19912598,40.9915674 9.10717773,-38.0181006 15.0277344,42.6362061 C15.0277344,42.6362061 12.9881543,43.6556396 12.6263623,45.3993701 C12.2314209,47.1099512 12.4944775,50.7282275 12.4944775,50.7282275 Z" id="Shape" fill="#A6A385"></path> <path d="M13.218418,44.0837305 C13.218418,44.0837305 25.0274512,36.320708 22.2639307,20.1698145 C19.5998584,8.42743652 13.3171533,4.57889648 12.6263623,3.0985791 C11.8699854,2.04599609 11.1460449,0.204243164 11.1460449,0.204243164 L11.6397217,32.8667529 C11.6397217,32.8999023 10.6199316,42.8664697 13.2187744,44.0840869" id="Shape" fill="#499D4A"></path> <path d="M10.4556104,44.5111084 C10.4556104,44.5111084 -0.629838867,36.9455566 0.0281591797,23.624126 C0.653007813,10.3023389 8.48161621,3.75657715 9.99472656,2.57246582 C10.9817236,1.51988281 11.0145166,1.12494141 11.080459,0.0723583984 C11.77125,1.55267578 11.6397217,22.209751 11.7381006,24.6435596 C12.0339502,34.0180713 11.2119873,42.7352979 10.4556104,44.5111084 Z" id="Shape" fill="#58AA50"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.39 0.37 6.57 3.41">
+          <g transform="matrix(.037376 0 0 .037376 1.069994 -1.319339)" fill-rule="evenodd">
+            <path d="M8.504 128.215h5.8v-22.977l9.058 20.033c1.026 2.408 2.5 3.3 5.354 3.3s4.24-.893 5.3-3.3l9.013-20.033v22.977h5.845v-22.977c0-2.23-.893-3.303-2.767-3.883-4.417-1.338-7.362-.178-8.7 2.81l-8.878 19.81-8.567-19.81c-1.294-2.988-4.284-4.148-8.745-2.81-1.83.58-2.722 1.652-2.722 3.883l-.001 22.977zm45.198-18.694h5.845v12.627c-.044.713.223 2.32 3.4 2.363 1.65.045 12.582 0 12.67 0v-15.08h5.845v20.658c0 5.086-6.3 6.2-9.236 6.246h-18.38v-3.88h18.427c3.748-.402 3.302-2.275 3.302-2.9v-1.518h-12.36c-5.756-.045-9.46-2.588-9.503-5.488v-13.03zm125.374-14.635c-3.568-.09-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72.938.715 1.875 1.428 2.855 2.053 1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428-.447-.445-.893-.848-1.34-1.293-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.09c.98-.09 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713.715-.18 1.428-.402 2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436-1.293-2.454-2.543-5.175-3.658-7.763-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.49-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.49.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 14.99.715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.09l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.09-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.49-.535-1.294-.178-1.83.088-.357.268-.49.623-.58.58-.49 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.09 4.37.49 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.09h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.09c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z" fill="#00678c"></path>
+            <path d="M85.916 128.215h16.776c1.963 0 3.838-.4 5.354-1.115 2.543-1.16 3.748-2.72 3.748-4.773v-4.283c0-1.65-1.383-3.213-4.148-4.283-1.428-.535-3.213-.848-4.953-.848h-7.05c-2.365 0-3.48-.715-3.793-2.275-.044-.178-.044-.357-.044-.535v-2.633c0-.135 0-.312.044-.49.312-1.205.937-1.518 3-1.74h17.177v-3.883h-16.33c-2.365 0-3.614.135-4.73.492-3.436 1.07-4.953 2.766-4.953 5.754v3.393c0 2.63 2.945 4.863 7.942 5.398.535.045 1.115.045 1.695.045h6.024c.223 0 .445 0 .623.045 1.83.178 2.633.49 3.168 1.158.357.357.447.67.447 1.072v3.39c0 .4-.268.938-.803 1.383s-1.385.758-2.5.803c-.223 0-.355.045-.58.045H85.916zm62.195-6.736c0 3.97 3 6.2 8.97 6.648.58.045 1.115.088 1.695.088h15.17v-3.88h-15.303c-3.393 0-4.686-.848-4.686-2.9v-20.078H148.1v20.123zm-32.615.177v-13.83c0-3.525 2.498-5.668 7.363-6.336.535-.045 1.07-.09 1.56-.09h11.064c.58 0 1.072.045 1.652.09 4.863.668 7.316 2.81 7.316 6.336v13.83c0 2.855-1.025 4.373-3.436 5.4l5.71 5.174h-6.736l-4.64-4.193-4.686.268h-6.246a13.66 13.66 0 0 1-3.391-.445c-3.7-1.028-5.53-2.99-5.53-6.204zm6.29-.31c0 .178.1.355.135.58.312 1.605 1.828 2.498 4.148 2.498h5.266l-4.818-4.373h6.736l4.238 3.838c.805-.447 1.295-1.072 1.473-1.875.045-.178.045-.4.045-.58v-13.252c0-.178 0-.355-.045-.535-.312-1.516-1.828-2.363-4.104-2.363h-8.79c-2.588 0-4.283 1.115-4.283 2.898z" fill="#ce8b2c"></path>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Más sobre mí -->
+      <div class="mt-6">
+        <a href="#sobre-mi" class="text-sm font-semibold transition">Más sobre mí</a>
+      </div>
+
+      <!-- Contacto -->
+      <div class="mt-4 text-sm">
+        <a href="mailto:contacto@jeidev.com" class="">contacto@jeidev.com</a>
+        <span class="mx-2">|</span>
+        <a href="#contacto" class="">Contáctame</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 py-10 text-black">
+    <!-- TÍTULO -->
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold">Skills</h2>
+
+      <p class="text-gray-500 mt-2 text-sm">A showcase of my technical stack and expertise.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- ANÁLISIS Y VISUALIZACIÓN -->
+      <div class="border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-5">Análisis y visualización</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <div class="badge badge-outline gap-2 p-4">Power BI</div>
+          <div class="badge badge-outline gap-2 p-4">Excel</div>
+          <div class="badge badge-outline gap-2 p-4">Python (ETL)</div>
+        </div>
+      </div>
+
+      <!-- BASES DE DATOS -->
+      <div class="border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-5">Bases de datos</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <div class="badge badge-outline gap-2 p-4">MySQL</div>
+          <div class="badge badge-outline gap-2 p-4">MongoDB</div>
+        </div>
+      </div>
+
+      <!-- PROGRAMACIÓN Y AUTOMATIZACIÓN -->
+      <div class="border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-5">Programación y automatización</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <div class="badge badge-outline gap-2 p-4">Python</div>
+          <div class="badge badge-outline gap-2 p-4">Git/GitHub</div>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTAS DE NEGOCIO -->
+      <div class="border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-5">Web</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <div class="badge badge-outline gap-2 p-4">React</div>
+          <div class="badge badge-outline gap-2 p-4">Django</div>
+          <div class="badge badge-outline gap-2 p-4">Tailwind</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 py-10">
+    <!-- TÍTULO -->
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold">Projects</h2>
+
+      <p class="text-gray-500 mt-2 text-sm">A showcase of my recent work and contributions.</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto space-y-8">
+      <!-- PROYECTO 1 -->
+      <div class="border border-gray-300 rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- IMAGEN -->
+        <div class="h-48 bg-gray-100 border border-gray-200 flex items-center justify-center bg-[repeating-linear-gradient(45deg,#f3f4f6_0px,#f3f4f6_6px,#e5e7eb_6px,#e5e7eb_12px)]">
+          <span class="text-gray-400 text-sm">Project Preview</span>
+        </div>
+
+        <!-- TEXTO -->
+        <div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">An IoT dashboard for monitoring and controlling smart home devices. Features real-time data integration, interactive visualizations of energy usage, and automated routine scheduling across multiple platforms.</p>
+
+          <h4 class="text-xs font-bold tracking-widest mb-3">BUILT WITH:</h4>
+
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="badge badge-outline px-5 py-3">React.js</span>
+            <span class="badge badge-outline px-5 py-3">PostgreSQL</span>
+            <span class="badge badge-outline px-5 py-3">AWS</span>
+          </div>
+
+          <a href="#" class="btn btn-sm w-full rounded-md">Download Documentation</a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2 -->
+      <div class="border border-gray-300 rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- TEXTO -->
+        <div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">A personal finance management tool that uses machine learning to categorize transactions and provide predictive budgeting insights for household expenses.</p>
+
+          <h4 class="text-xs font-bold tracking-widest mb-3">BUILT WITH:</h4>
+
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="badge badge-outline px-5 py-3">TypeScript</span>
+            <span class="badge badge-outline px-5 py-3">Python ML</span>
+          </div>
+
+          <a href="#" class="btn btn-sm w-full rounded-md">View Case Study</a>
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="h-48 bg-gray-100 border border-gray-200 flex items-center justify-center bg-[repeating-linear-gradient(45deg,#f3f4f6_0px,#f3f4f6_6px,#e5e7eb_6px,#e5e7eb_12px)]">
+          <span class="text-gray-400 text-sm">Mobile App Preview</span>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3 -->
+      <div class="border border-gray-300 rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- IMAGEN -->
+        <div class="h-48 bg-gray-100 border border-gray-200 flex items-center justify-center bg-[repeating-linear-gradient(45deg,#f3f4f6_0px,#f3f4f6_6px,#e5e7eb_6px,#e5e7eb_12px)]">
+          <span class="text-gray-400 text-sm">Project Preview</span>
+        </div>
+
+        <!-- TEXTO -->
+        <div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">An IoT dashboard for monitoring and controlling smart home devices. Features real-time data integration, interactive visualizations of energy usage, and automated routine scheduling across multiple platforms.</p>
+
+          <h4 class="text-xs font-bold tracking-widest mb-3">BUILT WITH:</h4>
+
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="badge badge-outline px-5 py-3">React.js</span>
+            <span class="badge badge-outline px-5 py-3">PostgreSQL</span>
+            <span class="badge badge-outline px-5 py-3">AWS</span>
+          </div>
+
+          <a href="#" class="btn btn-sm w-full rounded-md">Download Documentation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 py-12">
+    <!-- TÍTULO -->
+    <div class="mb-10">
+      <h2 class="text-4xl font-bold">Work Experience</h2>
+    </div>
+
+    <!-- EXPERIENCIAS -->
+    <div class="space-y-12 m-auto w-3/5">
+      <!-- EXPERIENCIA 1 -->
+      <div class="border-l-2 border-gray-300 pl-6">
+        <div class="mb-3">
+          <h3 class="text-xl font-semibold">Siguiente Nivel</h3>
+
+          <span class="text-gray-500 text-sm">2020 - 2022</span>
+        </div>
+
+        <p class="text-gray-600 leading-relaxed">Developed and maintained full-stack web applications using Django, React, and Node.js. Led a team of developers to deliver scalable solutions for enterprise clients.</p>
+      </div>
+
+      <!-- EXPERIENCIA 2 -->
+      <div class="border-l-2 border-gray-300 pl-6">
+        <div class="mb-3">
+          <h3 class="text-xl font-semibold">Freelance</h3>
+
+          <span class="text-gray-500 text-sm">2022 - Today</span>
+        </div>
+
+        <p class="text-gray-600 leading-relaxed">Built custom software solutions focused on automation, dashboards, business intelligence, and data analysis for small businesses and entrepreneurs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 py-12">
+    <!-- TITULO -->
+    <div class="mb-10">
+      <h2 class="text-4xl font-bold">Preguntas frecuentes</h2>
+
+      <p class="text-gray-500 mt-3 max-w-3xl">Algunas preguntas comunes sobre mi enfoque de trabajo, tecnologías y soluciones orientadas a negocios.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- IZQUIERDA -->
+      <div class="space-y-10">
+        <!-- PREGUNTA -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">¿Cómo puedes ayudar a una empresa a mejorar sus procesos?</h3>
+
+          <p class="text-gray-600 leading-relaxed">Desarrollo soluciones basadas en datos enfocadas en automatización, eficiencia operativa y toma de decisiones. Mi objetivo es transformar procesos manuales y repetitivos en sistemas claros, optimizados y escalables.</p>
+        </div>
+
+        <!-- PREGUNTA -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">¿Con qué tecnologías trabajas habitualmente?</h3>
+
+          <p class="text-gray-600 leading-relaxed">Principalmente trabajo con Python, SQL, Power BI, Django, MongoDB, APIs y herramientas de automatización. Combino desarrollo tecnológico con análisis de negocio para crear soluciones prácticas y eficientes.</p>
+        </div>
+      </div>
+
+      <!-- DERECHA -->
+      <div class="space-y-10">
+        <!-- PREGUNTA -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">¿Qué tipo de proyectos te interesa desarrollar?</h3>
+
+          <p class="text-gray-600 leading-relaxed">Me interesa participar en proyectos relacionados con inteligencia de negocios, dashboards, automatización de procesos, optimización operativa y sistemas que ayuden a las empresas a tomar decisiones más inteligentes mediante datos.</p>
+        </div>
+
+        <!-- PREGUNTA -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">¿Cómo abordas un nuevo proyecto?</h3>
+
+          <p class="text-gray-600 leading-relaxed">Primero analizo las necesidades del negocio y detecto oportunidades de mejora. A partir de ello, diseño soluciones enfocadas en claridad, escalabilidad, eficiencia y valor a largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 py-12">
+    <!-- TITULO -->
+    <div class="mb-10">
+      <h2 class="text-4xl font-bold">Contact Me</h2>
+    </div>
+
+    <!-- FORMULARIO -->
+    <form class="space-y-6  m-auto md:w-4/6">
+      <!-- FILA -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- NAME -->
+        <div>
+          <label class="block mb-2 font-medium">Name:</label>
+
+          <input type="text" class="input input-bordered w-full" />
+        </div>
+
+        <!-- EMAIL -->
+        <div>
+          <label class="block mb-2 font-medium">Email:</label>
+
+          <input type="email" class="input input-bordered w-full" />
+        </div>
+      </div>
+
+      <!-- MENSAJE -->
+      <div>
+        <label class="block mb-2 font-medium">Message:</label>
+
+        <textarea class="textarea textarea-bordered w-full h-40"></textarea>
+      </div>
+
+      <!-- BOTON -->
+      <button class="btn btn-primary w-full">Send Message</button>
+    </form>
+
+    <!-- DIVISOR -->
+    <div class="flex items-center justify-center gap-4 my-2">
+      <div class="h-px bg-gray-300 w-32"></div>
+
+      <span class="text-gray-500 font-medium">o</span>
+
+      <div class="h-px bg-gray-300 w-32"></div>
+    </div>
+
+    <!-- BOTON WHATSAPP -->
+    <div class="flex justify-center">
+      <a href="https://wa.me/51945589482" target="_blank" class="btn btn-success">Escribir por WhatsApp</a>
+    </div>
+  </section>
 {% endblock %}

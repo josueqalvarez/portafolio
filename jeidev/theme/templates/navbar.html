@@ -1,29 +1,44 @@
-<nav class="bg-blue-600 text-white p-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
+<nav class="w-full border-b border-gray-600 bg-[#06122b] text-white">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- CONTENEDOR -->
+        <div class="flex items-center justify-center h-16">
 
-        <h1 class="text-xl font-bold">
-            MiWeb
-        </h1>
 
-        <ul class="flex gap-4">
-            <li>
-                <a href="/" class="hover:text-gray-200">
-                    Inicio
-                </a>
-            </li>
+            <!-- MENÚ -->
+            <ul class="hidden md:flex gap-8 text-sm font-medium">
+                <li>
+                    <a href="{% url 'home' %}" class="hover:text-cyan-400 transition">
+                        Home
+                    </a>
+                </li>
 
-            <li>
-                <a href="#" class="hover:text-gray-200">
-                    Nosotros
-                </a>
-            </li>
+                <li>
+                    <a href="#" class="hover:text-cyan-400 transition">
+                        About
+                    </a>
+                </li>
 
-            <li>
-                <a href="#" class="hover:text-gray-200">
-                    Contacto
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="#" class="hover:text-cyan-400 transition">
+                        Apps
+                    </a>
+                </li>
 
+                <li>
+                    <a href="#" class="hover:text-cyan-400 transition">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="hover:text-cyan-400 transition">
+                        Donate
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
     </div>
 </nav>
